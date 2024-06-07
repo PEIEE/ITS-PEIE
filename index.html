@@ -50,15 +50,48 @@
             padding: 20px;
             flex: 1 1 calc(33.333% - 40px);
             box-sizing: border-box;
+            animation: fadeIn 1s ease-in-out;
         }
         .news img, .tournaments img, .teams img {
             max-width: 100%;
             height: auto;
         }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
         footer {
             background-color: #121212;
             text-align: center;
             padding: 20px;
+        }
+        .contact-form {
+            background-color: #2e2e2e;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #ff6600;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #ff4500;
         }
     </style>
 </head>
@@ -70,6 +103,7 @@
         <a href="#news">Noticias</a>
         <a href="#tournaments">Torneos</a>
         <a href="#teams">Equipos</a>
+        <a href="#contact">Contacto</a>
     </nav>
     <div class="container">
         <section id="news" class="section news">
@@ -126,10 +160,20 @@
                 <p>Descripción breve del equipo 3...</p>
             </article>
         </section>
+        <section id="contact" class="section contact">
+            <h2>Contacto</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </div>
     <footer>
         <p>&copy; 2024 eSports Central. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
+
 
